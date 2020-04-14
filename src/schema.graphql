@@ -1,3 +1,16 @@
+"use strict"
+type AutoPayload {
+  token: String
+  user: User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  links: [Link!]!
+}
+
 type Query {
   info: String!
   feed: [Link!]!
@@ -8,10 +21,13 @@ type Mutation {
   post(url: String!, description: String!): Link!
   updateLink(id: ID!, url: String, description: String): Link
   deleteLink(id: ID!): Link
+  signup(email: String!, password: String!, name: String!): AutoPayload
+  login(email: String!, password: String!): AutoPayload
 }
 
 type Link {
   id: ID!
   description: String!
   url: String!
+  postedBy: User
 }

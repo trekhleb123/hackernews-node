@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "graphql-tag": "^2.10.3",
     "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
     "nodemon": "^2.0.3",
     "prisma": "^1.34.10",
